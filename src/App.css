@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input:focus {
+  transition-duration: 1s;
+  transform: scale(1.03);
+}
+.img {
+  width: 240px;
+}
+.ininDiv {
+  width: 100%;
+  padding: 30px 20px;
+  display: flex;
+  gap: 10px;
+}
+p {
+  padding: 10px;
+  background-color: #f99d2e;
+  color: white;
+  border-radius: 100px;
+}
