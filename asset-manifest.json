@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/todoMovie/static/css/main.e389f33d.css",
+    "main.js": "/todoMovie/static/js/main.ab81524e.js",
+    "index.html": "/todoMovie/index.html",
+    "main.e389f33d.css.map": "/todoMovie/static/css/main.e389f33d.css.map",
+    "main.ab81524e.js.map": "/todoMovie/static/js/main.ab81524e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e389f33d.css",
+    "static/js/main.ab81524e.js"
+  ]
+}
