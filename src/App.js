@@ -61,7 +61,7 @@ function App() {
     setMovie(filteredMovie);
   };
   const AddModal = document.getElementById('AddModal');
-
+  const delModal = document.getElementById('deleteModal');
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -137,36 +137,39 @@ function App() {
                       <InInDivCss className="ininDiv">
                         <h4>{mov.rating}/5 stars</h4>
                         {delmodal ? (
-                          <>
-                            <Backdrop></Backdrop>
-                            <Container>
-                              <p
-                                style={{
-                                  background: 'none',
-                                  color: 'black',
-                                  fontSize: '1.5rem',
-                                }}
-                              >
-                                do you want delete
-                              </p>
-                              <button
-                                style={{
-                                  background: 'white',
-                                  color: 'blue',
-                                  border: '1px solid blue',
-                                }}
-                                onClick={closeDelModal}
-                              >
-                                NO
-                              </button>
-                              <button
-                                style={{ background: 'blue' }}
-                                onClick={() => deleteBtn(mov.id)}
-                              >
-                                YES
-                              </button>
-                            </Container>
-                          </>
+                          ReactDOM.createPortal(
+                            <>
+                              <Backdrop></Backdrop>
+                              <Container>
+                                <p
+                                  style={{
+                                    background: 'none',
+                                    color: 'black',
+                                    fontSize: '1.5rem',
+                                  }}
+                                >
+                                  do you want delete
+                                </p>
+                                <button
+                                  style={{
+                                    background: 'white',
+                                    color: 'blue',
+                                    border: '1px solid blue',
+                                  }}
+                                  onClick={closeDelModal}
+                                >
+                                  NO
+                                </button>
+                                <button
+                                  style={{ background: 'blue' }}
+                                  onClick={() => deleteBtn(mov.id)}
+                                >
+                                  YES
+                                </button>
+                              </Container>
+                            </>,
+                            delModal
+                          )
                         ) : (
                           <button
                             style={{ background: '#c22a1f' }}
